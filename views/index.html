@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Timestamp Microservice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
 </head>
 <body>
@@ -13,7 +13,8 @@
         <h2>API: Timestamp Microservice</h2>
         <h3>User stories: </h3>
         <ol class='stories'>
-            <li>The API endpoint is <code>`GET [project_url]/api/timestamp/:date_string?`</code></li>
+            <!-- add project url when I have one -->
+            <li>The API endpoint is <code>GET [project_url]/api/timestamp/:date_string?</code></li>
             <li>A date string is valid if can be successfully parsed by<code>new Date(date_string)</code>.</li>
             <li>An empty date string will generate a current time stamp via <code>new Date()</code>.</li>
             <li>A valid date string will return JSON having the structure: <br><code>{"unix": &lt;date.getTime()&gt;, "utc" : &lt;date.toUTCString()&gt; }<br>
@@ -22,8 +23,10 @@
 
     <h3>Example Usage:</h3>
         <ul>
-            <li></li>
-            <li></li>
+            <li>
+                <code>GET [project_url]/api/timestamp/2013-11-22</code>
+            </li>
+            <li><code>GET [project_url]/api/timestamp/1518378684512</code></li>
         </ul>
     
     <h3>Example Output:</h3>

@@ -1,8 +1,8 @@
 body {
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     color: black;
-    background-color: rgb(220, 233, 233);
+    background-color: #f4f4eb;
     text-align: center;
     line-height: 1.4em;
 }
@@ -36,4 +36,5 @@ ul {
     left: 5px;
     right: 5px;
     bottom: 0;
+    font-size: 12px;
 }
