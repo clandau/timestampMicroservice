@@ -1,0 +1,37 @@
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 18px;
+    color: black;
+    background-color: rgb(220, 233, 233);
+    text-align: center;
+}
+
+container {
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.stories {
+    position: relative;
+    text-align: justify;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+code {
+    font-family: monospace;
+    padding: 2px;
+    color: black;
+    background-color: #fff;
+  }
+
+ul {
+    list-style-type: none;
+}
+
+.footer {
+    position: fixed;
+    left: 5px;
+    right: 5px;
+    bottom: 0;
+}
