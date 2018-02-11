@@ -4,6 +4,7 @@ body {
     color: black;
     background-color: rgb(220, 233, 233);
     text-align: center;
+    line-height: 1.4em;
 }
 
 container {
@@ -20,6 +21,7 @@ container {
 
 code {
     font-family: monospace;
+    font-size: 15px;
     padding: 2px;
     color: black;
     background-color: #fff;

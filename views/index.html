@@ -13,10 +13,11 @@
         <h2>API: Timestamp Microservice</h2>
         <h3>User stories: </h3>
         <ol class='stories'>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>The API endpoint is <code>`GET [project_url]/api/timestamp/:date_string?`</code></li>
+            <li>A date string is valid if can be successfully parsed by<code>new Date(date_string)</code>.</li>
+            <li>An empty date string will generate a current time stamp via <code>new Date()</code>.</li>
+            <li>A valid date string will return JSON having the structure: <br><code>{"unix": &lt;date.getTime()&gt;, "utc" : &lt;date.toUTCString()&gt; }<br>
+                e.g. {"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</code></li>
         </ol>
 
     <h3>Example Usage:</h3>
@@ -26,7 +27,7 @@
         </ul>
     
     <h3>Example Output:</h3>
-        <code></code>
+        <code>{"unix":1518378684512,"utc":"Sun, 11 Feb 2018 19:51:24 GMT"}</code>
 
     </div>
     <div class="footer">
