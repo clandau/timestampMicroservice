@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/timestamp/:date_string?', (req, res) => {
+  res.writeHead(200, {"Content-Type": "text/plain"});
     let date;
     let dateString = req.params.date_string;
     if(!dateString) date = new Date();
