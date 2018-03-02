@@ -28,6 +28,11 @@ app.get('/api/timestamp/:date_string?', (req, res) => {
     else res.json({'unix': date.getTime(), 'utc': date.toUTCString()});
   });
 
+//handle page not found errors
+app.get('*', function(req, res){
+  res.sendFile(__dirname + '/views/oops.html', 404);
+  });
+
   const listener = app.listen(PORT, () => {
       console.log('You are listening on port ' + PORT);
   });
