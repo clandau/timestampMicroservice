@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/timestamp/:date_string?', (req, res) => {
-  res.writeHead(200, {"Content-Type": "text/plain"});
     let date;
     let dateString = req.params.date_string;
     if(!dateString) date = new Date();
@@ -23,9 +22,11 @@ app.get('/api/timestamp/:date_string?', (req, res) => {
       else date = new Date(parseInt(dateString));
     }
     if(!date.getDate()) {
-      res.json({"error" : "Invalid Date" });
+      res.status(500).json({"error" : "Invalid Date" });
     }
-    else res.json({'unix': date.getTime(), 'utc': date.toUTCString()});
+    else {
+      res.status(200).json({'unix': date.getTime(), 'utc': date.toUTCString()});
+    }
   });
 
 //handle page not found errors
